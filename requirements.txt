@@ -1,0 +1,6 @@
+ddg>=0.2.2
+langchain>=1.2.10
+langchain-community>=0.4.1
+langchain-ollama>=1.0.1
+ollama>=0.6.1
+python-dotenv>=1.0.0
