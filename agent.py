@@ -5,15 +5,14 @@ from langchain_ollama import ChatOllama
 import os
 from dotenv import load_dotenv
 
-MODEL_NAME = os.getenv("minimax-m2.5:cloud")
+MODEL_NAME = os.getenv("MODEL_NAME", "minimax-m2.5:cloud")
 TEMPERATURE = float(os.getenv("TEMPERATURE", "0.7"))
 
 load_dotenv()
 
 llm = ChatOllama(
-    model="minimax-m2.5:cloud",
-    temperature=0.7,
-
+    model=MODEL_NAME,
+    temperature=TEMPERATURE,
 )
 
 def get_weather(city: str) -> str:
